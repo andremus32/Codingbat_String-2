@@ -1,0 +1,14 @@
+//String-2 > doubleChar
+public String doubleChar(String str) {
+  int arrPointer = 0;
+  char[] arrForNewString = new char[str.length() * 2];
+  
+  for(int i = 0; i < str.length(); i++){
+    arrForNewString[arrPointer] = str.charAt(i);
+    arrPointer++;
+    arrForNewString[arrPointer] = str.charAt(i);
+    arrPointer++;
+  }
+  String nStr = new String(arrForNewString);
+  return nStr;
+}

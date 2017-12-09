@@ -1,0 +1,17 @@
+//String-2 > xyzThere
+public boolean xyzThere(String str) {
+  String noPointXyz = str.replace(".xyz", "");
+  String noXyz = str.replace("xyz", "");
+  String checkForDoubleXyz = noPointXyz.replace("xyz", "");
+  
+  if (noXyz.length() < str.length()){
+    if (noPointXyz.length() < str.length()){
+      if (checkForDoubleXyz.length() < noPointXyz.length()){
+        return true;
+      }
+      else return false;
+    }
+    else return true;
+}
+else return false;
+}

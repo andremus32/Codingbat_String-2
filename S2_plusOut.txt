@@ -1,0 +1,25 @@
+//String-2 > plusOut
+public String plusOut(String str, String word) {
+  char[] fromStr = str.toCharArray();
+  char[] fromWord = word.toCharArray();
+  
+  for(int i = 0; i < str.length(); i++){
+    if(fromStr[i] == fromWord[0]){
+      boolean check = true;
+      for(int j = 0; j < word.length(); j++){
+        if(fromStr[i+j] != fromWord[j]){
+          check = false;
+        }
+      }
+      if(check){
+        i += word.length()-1;
+      }
+      else {
+        fromStr[i] = '+';
+      }
+    }
+    else fromStr[i] = '+';
+  }
+  str = String.valueOf(fromStr);
+  return str;
+}

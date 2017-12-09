@@ -1,0 +1,17 @@
+//String-2 > oneTwo
+public String oneTwo(String str) {
+  char[] fromStr = str.toCharArray();
+  String result = "";
+  
+  if(str.length() > 2){
+    for(int i = 0; i <= str.length()-3; i += 3){
+      char c1 = fromStr[i];
+      fromStr[i] = fromStr[i+1];
+      fromStr[i+1] = fromStr[i+2];
+      fromStr[i+2] = c1;
+    }
+    result = String.valueOf(fromStr);
+    result = result.substring(0, str.length() - str.length() % 3);
+  }
+  return result;
+}

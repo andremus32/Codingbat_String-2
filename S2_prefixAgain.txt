@@ -1,0 +1,18 @@
+//String-2 > prefixAgain
+public boolean prefixAgain(String str, int n) {
+  String prefix = str.substring(0, n);
+  boolean isAppear = false;
+  
+  if(str.length() > 2){
+    for(int i = n; i < str.length()-n; i++){
+      String partForCheck = str.substring(i, i + n);
+      if (prefix.equals(partForCheck)){
+        isAppear = true;
+      }
+    }
+  }
+  else if (str.length() == 2 && str.charAt(0) == str.charAt(1)){
+    isAppear = true;
+  }
+  return isAppear;
+}

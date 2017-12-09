@@ -1,0 +1,4 @@
+//String-2 > zipZap
+public String zipZap(String str) {
+  return str = str.replaceAll("z.p", "zp");
+}

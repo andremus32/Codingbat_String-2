@@ -1,0 +1,14 @@
+//String-2 > xyBalance
+public boolean xyBalance(String str) {
+  boolean isBalanced = true;
+  char[] arrFromStr = str.toCharArray();
+  for(int i = 0; i < str.length(); i++){
+    if (str.charAt(i) == 'x' || str.charAt(i) == 'X'){
+      isBalanced = false;
+    }
+    else if (str.charAt(i) == 'y' || str.charAt(i) == 'Y'){
+      isBalanced = true;
+    }
+  }
+  return isBalanced;
+}

@@ -1,0 +1,22 @@
+//String-2 > endOther
+public boolean endOther(String a, String b) {
+  String endingA = "";
+  String endingB = "";
+  int lengthA = a.length();
+  int lengthB = b.length();
+  
+  if (lengthA > 2 && lengthB > 2){
+    endingA = a.substring(a.length()-3);
+    endingB = b.substring(b.length()-3);
+  }
+  else if (lengthA > 1 && lengthB > 1){
+    endingA = a.substring(a.length()-2);
+    endingB = b.substring(b.length()-2);
+  }
+  else {
+    endingA = a.substring(a.length()-1);
+    endingB = b.substring(b.length()-1);
+  }
+  
+  return(endingA.toLowerCase().equals(endingB.toLowerCase()));
+}

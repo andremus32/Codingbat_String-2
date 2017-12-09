@@ -1,0 +1,27 @@
+//String-2 > xyzMiddle
+public boolean xyzMiddle(String str) {
+  int startMiddle = 0;
+  int endMiddle = 0;
+  boolean isAppear = false;
+  
+  if(str.length() > 2){
+  if(str.length() % 2 == 0){
+    startMiddle = str.length() / 2 - 2;
+    endMiddle = str.length() / 2 + 2;
+    if(str.toLowerCase().charAt(startMiddle) == 'x' && str.toLowerCase().charAt(startMiddle+1) == 'y' && str.toLowerCase().charAt(startMiddle+2) == 'z'){
+      isAppear = true;
+    }
+    else if(str.toLowerCase().charAt(startMiddle + 1) == 'x' && str.toLowerCase().charAt(startMiddle+2) == 'y' && str.toLowerCase().charAt(startMiddle+3) == 'z'){
+      isAppear = true;
+    }
+  }
+  else {
+    startMiddle = (str.length()-1) / 2 - 1;
+    endMiddle = (str.length() - 1) / 2 + 2;
+    if(str.toLowerCase().charAt(startMiddle) == 'x' && str.toLowerCase().charAt(startMiddle+1) == 'y' && str.toLowerCase().charAt(startMiddle+2) == 'z'){
+      isAppear = true;
+    }
+  }
+  }
+  return isAppear;
+}

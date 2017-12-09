@@ -1,0 +1,4 @@
+//String-2 > starOut
+public String starOut(String str) {
+  return str = str.replaceAll("(.|^)\\*+(.|$)", "");
+}

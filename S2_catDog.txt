@@ -1,0 +1,10 @@
+//String-2 > catDog
+public boolean catDog(String str) {
+  String noCats = str.toLowerCase().replace("cat", "");
+  String noDogs = str.toLowerCase().replace("dog", "");
+  
+  int catCount = (str.length() - noCats.length()) / 3;
+  int dogCount = (str.length() - noDogs.length()) / 3;
+  
+  return(catCount == dogCount);
+}

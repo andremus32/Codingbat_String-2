@@ -1,0 +1,30 @@
+//String-2 > mixString
+public String mixString(String a, String b) {
+  char[] fromStrA = a.toCharArray();
+  char[] fromStrB = b.toCharArray();
+  int resultArrCounter = 0;
+  String finResult = "";
+  
+  if (a.length() > 0 && a.length() > b.length()){
+    char[] midResult = new char[b.length() * 2];
+    for(int i = 0; i < b.length(); i++){
+      midResult[resultArrCounter] = fromStrA[i];
+      resultArrCounter++;
+      midResult[resultArrCounter] = fromStrB[i];
+      resultArrCounter++;
+    }
+    finResult = new String(midResult) + a.substring(b.length());
+  }
+  else {
+    char[] midResult = new char[a.length() * 2];
+    for(int i = 0; i < a.length(); i++){
+      midResult[resultArrCounter] = fromStrA[i];
+      resultArrCounter++;
+      midResult[resultArrCounter] = fromStrB[i];
+      resultArrCounter++;
+  }
+  finResult = new String(midResult) + b.substring(a.length());
+}
+
+return finResult;
+}
